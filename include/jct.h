@@ -4,7 +4,7 @@
 #include "point.h"
 #include <vector>
 
-namespace jtc {
+namespace jct {
 std::vector<Point> polygon(std::vector<Point>& points);
 }
 

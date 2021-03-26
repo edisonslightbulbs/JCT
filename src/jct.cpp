@@ -1,6 +1,6 @@
 #include <vector>
 
-#include "jtc.h"
+#include "jct.h"
 #include "point.h"
 
 bool inside(std::vector<Point>& points, const Point& point, const float& xMax,
@@ -20,7 +20,7 @@ bool inside(std::vector<Point>& points, const Point& point, const float& xMax,
     return inside;
 }
 
-std::vector<Point> jtc::polygon(std::vector<Point>& points)
+std::vector<Point> jct::polygon(std::vector<Point>& points)
 {
     std::vector<float> x;
     std::vector<float> y;
@@ -41,7 +41,7 @@ std::vector<Point> jtc::polygon(std::vector<Point>& points)
             || point.m_y > yMax) {
             continue;
         }
-        if(!inside(points, point, xMax, xMin, yMax, yMin)){
+        if (!inside(points, point, xMax, xMin, yMax, yMin)) {
         } else {
             proposal.push_back(point);
         }
